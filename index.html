@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronomètre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo-container">
+        <button id="toggleTheme">
+            <img src="/img/lune.png" alt="Changer de thème" id="themeIcon">
+        </button>
+    </div>
+
+
+    <div class="timer-container">
+        <div id="timer">
+            <input type="number" id="input-hours" min="0" placeholder="00">
+            :
+            <input type="number" id="input-minutes" min="0" placeholder="00">
+            :
+            <input type="number" id="input-seconds" min="0" placeholder="00">
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="music-control">
+            <label for="music">
+                choose a sound:</label>
+            <select id="music">
+                <option value="audio/cloche.mp3">Bell</option>
+                <option value="audio/ocean.mp3">Océan</option>
+                <option value="audio/marimba.mp3">Marimba</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <p>Time is up !</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
